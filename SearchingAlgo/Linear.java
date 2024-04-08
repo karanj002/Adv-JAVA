@@ -1,0 +1,19 @@
+package SearchingAlgo;
+
+import java.util.Scanner;
+
+public class Linear {
+    public static int linearSearch(int[] arr, int search){
+        for(int i=0;i<arr.length;i++){
+            if(arr[i] == search){
+                return i;
+            }
+        }
+        return -1;
+    }
+    public static void main(String a[]){
+        int[] a1= {10,20,30,50,70,90};
+        int key = 50;
+        System.out.println(key+" is found at index: "+linearSearch(a1, key));
+    }
+}

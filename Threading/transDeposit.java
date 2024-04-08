@@ -1,0 +1,15 @@
+package Threading;
+
+class transDeposit implements Runnable{
+    int amount;
+    AccSynchro acc;
+    transDeposit(AccSynchro x, int amt){
+        acc=x;
+        amount=amt;
+        new Thread(this).start();
+    }
+    @Override
+    public void run() {
+        acc.deposit(amount);
+    }
+}
